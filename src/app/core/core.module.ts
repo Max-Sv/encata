@@ -1,20 +1,24 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../material.module';
 import { CoreComponent } from './core.component';
 import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
 import { ProfileComponent } from './profile/profile.component';
+// import { UsersComponent } from '../users/users.component';
+// import { CoreService } from './core.service';
 
 @NgModule({
   declarations: [
     CoreComponent,
     HeaderComponent,
     MenuComponent,
-    ProfileComponent
+    ProfileComponent,
+    // UsersComponent
   ],
   imports: [
-    // RouterModule,
+    RouterModule,
     // FormsModule,
     // ReactiveFormsModule,
     // RouterModule,
