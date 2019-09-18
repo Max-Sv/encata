@@ -1,8 +1,8 @@
-<app-header></app-header>
+<app-header [currentUser]='currentUser'></app-header>
 <mat-drawer-container class="container">
   <mat-drawer mode="side" opened>
-    <app-profile></app-profile>
-    <app-menu></app-menu>
+    <app-profile [currentUser]='currentUser'></app-profile>
+    <app-menu [currentUser]='currentUser'></app-menu>
   </mat-drawer>
 
   <mat-drawer-content>

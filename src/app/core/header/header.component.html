@@ -6,9 +6,15 @@
       </mat-icon>Encata
     </h1>
     <div class="header__menu">
-      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">how_to_reg</mat-icon>
-      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">input</mat-icon>
-      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">exit_to_app</mat-icon>
+      <a routerLink="/login" *ngIf='currentUser.name==="Guest"'>
+        <mat-icon class="header__menu-icon">how_to_reg</mat-icon>
+      </a>
+      <a routerLink="/login" *ngIf='currentUser.name==="Guest"'>
+        <mat-icon class="header__menu-icon">input</mat-icon>
+      </a>
+      <a routerLink="/login" *ngIf='currentUser.name!=="Guest"'>
+        <mat-icon class="header__menu-icon">exit_to_app</mat-icon>
+      </a>
     </div>
   </mat-toolbar-row>
 </mat-toolbar>

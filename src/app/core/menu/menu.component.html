@@ -1,19 +1,19 @@
 <div class="menu-link" routerLinkActive="active">
   <a routerLink="/users">
-    <span>Home</span>
+    <span>Table</span>
   </a>
 </div>
-<div class="menu-link" routerLinkActive="active">
-  <a routerLink="">
+<div class="menu-link" routerLinkActive="active" *ngIf='currentUser.name==="Guest"'>
+  <a routerLink="/auth/login">
     <span>Log in</span>
   </a>
 </div>
-<div class="menu-link" routerLinkActive="active">
-  <a routerLink="">
+<div class="menu-link" routerLinkActive="active" *ngIf='currentUser.name==="Guest"'>
+  <a routerLink="/auth/signup">
     <span>Sign up</span>
   </a>
 </div>
-<div class="menu-link" routerLinkActive="active">
+<div class="menu-link" routerLinkActive="active" *ngIf='currentUser.name!=="Guest"'>
   <a routerLink="">
     <span>Log out</span>
   </a>

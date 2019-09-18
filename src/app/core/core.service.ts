@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 export interface IUser {
-  id: number;
+  id?: number;
   name: string;
-  email: string;
-  phone: string;
+  email?: string;
+  phone?: string;
+  password?: string;
 }
 
 @Injectable({
@@ -19,7 +20,12 @@ export class CoreService {
     { id: 44, name: 'Tom', email: 'tom@gmail.com', phone: '+375 44 3457585' },
   ];
 
-  constructor() { }
-  getUsers = () => this.users;
+  private currentUser: IUser;
+
+  constructor() {
+    this.currentUser = { name: 'Guest' };
+  }
+  getUsers = (): IUser[] => this.users;
+  getCurrentUser = (): IUser => this.currentUser;
 
 }

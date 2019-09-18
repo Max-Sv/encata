@@ -12,9 +12,6 @@ mat-toolbar {
       font-size: 26px;
       line-height: 25px;
     }
-      .header__logo-icon {
-        color: aqua;
-      }
 
     .header__menu {
       margin: auto 10px;
@@ -22,4 +19,8 @@ mat-toolbar {
 
 .mat-icon {
   margin-left: 15px;
+  color: #ffffff;
+}
+.header__logo-icon {
+  color: aqua;
 }
