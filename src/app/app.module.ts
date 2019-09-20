@@ -8,12 +8,15 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
+import { UsersComponent } from './users/users.component';
 import { MaterialModule } from './material.module';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-
+    UsersComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +28,8 @@ import { MaterialModule } from './material.module';
     FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }

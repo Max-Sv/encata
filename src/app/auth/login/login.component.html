@@ -1,0 +1,22 @@
+<div class='login'>
+  <mat-card class='login__menu'>
+    <h4>Log In</h4>
+    <form class="login__form" [formGroup]='loginForm'>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Name" #name formControlName='nameControl'>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Password" #password formControlName='passwordControl'
+          [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+
+    </form>
+    <button mat-button color="primary" (click)="getUser(name.value, password.value)" [disabled]="loginForm.invalid">Log
+      In</button>
+  </mat-card>
+</div>

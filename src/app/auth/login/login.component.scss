@@ -1,0 +1,25 @@
+.login {
+  z-index: 2;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0
+}
+
+  .login__menu {
+    position: fixed;
+    background-color: #ffffff;
+    left: 30vw;
+    top: 30vh;
+    width: 30vw;
+    min-width: 200px;
+    height: auto;
+    z-index: 1000;
+    text-align: center
+  }
+    .login__form {
+      display: flex;
+      flex-direction: column;
+    }

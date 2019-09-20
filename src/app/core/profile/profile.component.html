@@ -1,4 +1,7 @@
 <div class="profile">
-  <div class="profile__avatar"></div>
-  <p class="profile__name">Guest</p>
+  <div class="profile__avatar" [ngStyle]="{
+    background: 'url(' + currentUser.avatar + ') no-repeat ',
+    'background-size': '100%'
+  }"></div>
+  <p class="profile__name">{{currentUser.name}}</p>
 </div>

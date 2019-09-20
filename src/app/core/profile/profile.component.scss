@@ -1,11 +1,18 @@
 .profile {
   height: 25vh;
-  border-bottom: 1px solid black
+  border-bottom: 1px solid #EBEFF2
 }
 
   .profile__avatar {
+    margin: 5px auto;
     width: 100px;
     height: 100px;
     border-radius: 50%;
     background-color: black;
+  }
+  .profile__name {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
   }

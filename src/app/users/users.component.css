@@ -1,0 +1,7 @@
+.users {
+  width: 90%;
+  margin: 10px auto;
+}
+  table, mat-form-field {
+    width: 100%;
+  }
