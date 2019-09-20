@@ -5,6 +5,7 @@ export interface IUser {
   email?: string;
   phone?: string;
   password?: string;
+  avatar?: string;
 }
 
 @Injectable({
@@ -23,8 +24,13 @@ export class CoreService {
   private currentUser: IUser;
 
   constructor() {
-    this.currentUser = { name: 'Guest' };
+    this.currentUser = {
+      name: 'Guest',
+      avatar: '../../assets/image/profile.png'
+    };
+
   }
+
   getUsers = (): IUser[] => this.users;
   getCurrentUser = (): IUser => this.currentUser;
 

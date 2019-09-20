@@ -9,11 +9,14 @@ import { CoreService, IUser } from '../core/core.service';
 })
 export class CoreComponent implements OnInit {
   public currentUser: IUser;
-
+  public profileState = true;
   constructor(private coreService: CoreService) { }
 
   ngOnInit() {
     this.currentUser = this.coreService.getCurrentUser();
+  }
+  onChanged(state) {
+    this.profileState = state;
   }
 
 }

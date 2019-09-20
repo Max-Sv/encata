@@ -9,6 +9,7 @@ import { ProfileComponent } from './profile/profile.component';
 // import { UsersComponent } from '../users/users.component';
 // import { CoreService } from './core.service';
 
+
 @NgModule({
   declarations: [
     CoreComponent,

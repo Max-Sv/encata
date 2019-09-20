@@ -1,4 +1,4 @@
-.login {
+.signup {
   z-index: 2;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.5);
@@ -8,7 +8,7 @@
   top: 0
 }
 
-  .login__menu {
+  .signup__menu {
     position: fixed;
     background-color: #ffffff;
     left: 30vw;
@@ -19,27 +19,7 @@
     z-index: 1000;
     text-align: center
   }
-    .login__form {
+    .signup__form {
       display: flex;
       flex-direction: column;
     }
-
-    // h4
-    //   font-family: Poppins
-    //   font-style: normal
-    //   font-weight: 600
-    //   font-size: 12px
-    //   line-height: 18px
-    //   color: #323C47
-    // p
-    //   font-family: Poppins
-    //   font-style: normal
-    //   font-weight: normal
-    //   font-size: 12px
-    //   line-height: 18px
-    //   color: #323C47
-    // button
-    //   margin: 5px
-    //   font-weight: bold
-    //   font-size: 12px
-    //   line-height: 18px

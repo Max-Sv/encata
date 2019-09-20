@@ -26,7 +26,7 @@ export class UsersComponent implements OnInit {
   ngOnInit() {
     this.users = this.coreServise.getUsers();
     this._users = [...this.users];
-    this._users.map(user => user.button = 'go');
+    this._users.map(user => user.button = 'Get ID');
     this.dataSource = new MatTableDataSource(this._users);
     this.dataSource.sort = this.sort;
   }

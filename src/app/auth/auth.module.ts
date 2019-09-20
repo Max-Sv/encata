@@ -4,8 +4,10 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../material.module';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
-import { TestComponent } from './test/test.component';
+import { AuthService } from './auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ConfirmEqualValidatorDirective } from './signup/confirm-equal-validator.directive';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -15,7 +17,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    ConfirmEqualValidatorDirective
   ],
   imports: [
     RouterModule,
@@ -24,11 +27,12 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     MaterialModule,
     CommonModule,
+    HttpClientModule
   ],
   exports: [
 
   ],
-  providers: [],
+  providers: [AuthService],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AuthModule { }
